@@ -1,11 +1,44 @@
 :root {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    --text-primary:  #b6b6b6;
-    --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
+    --gray0: #f8f8f8;
+    --gray1: #dbe1e8;
+    --gray2: #b2becd;
+    --gray3: #6c7983;
+    --gray4: #454e56;
+    --gray5: #2a2e35;
+    --gray6: #12181b;
+    --blue: #0084a5;
+    --purple: #a82dd1;
+    --yellow: #fff565;
+}
 
+.light {
+    --bg: var(--gray0);
+    --bg-nav: linear-gradient(to bottom, var(--gray1), var(--gray3));
+    --bg-dropdown: var(--gray0);
+    --text: var(--gray6);
+    --border-color: var(--blue);
+    --bg-solar: var(--yellow);
+}
+
+.dark {
+    --bg: var(--gray5);
+    --bg-nav: linear-gradient(to bottom, var(--gray5), var(--gray6));
+    --bg-dropdown: var(--gray6);
+    --text: var(--gray0);
+    --border-color: var(--purple);
+    --bg-solar: var(--blue);
+}
+
+.solar {
+    --gray0: #fbffd4;
+    --gray1: #f7f8d0;
+    --gray2: #b6f880;
+    --gray3: #5ec72d;
+    --gray4: #3ea565;
+    --gray5: #005368;
+    --gray6: #003d4c;
 }
 
 a {
@@ -14,16 +47,16 @@ a {
 }
 
 body {
-    color: black;
-    background-color: white;
+    color: var(--text);
+    background: var(--bg);
     margin: 0;
     padding: 0;
-
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 header {
     padding: 1em;
-    background: red;
+    background: var(--bg-dropdown);
     margin-bottom: 1em;
     padding-bottom: 3.5em;
     text-align: center;
@@ -34,7 +67,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: #1e1e24;
+    background: var(--border-color);
 }
 
 body::-webkit-scrollbar-thumb {
@@ -48,7 +81,7 @@ main {
 
 .navbar {
     position: fixed;
-    background-color: var(--bg-primary);
+    background: var(--bg-nav);
     transition: width 200ms ease;
 }
 
@@ -60,6 +93,7 @@ main {
     flex-direction: column;
     align-items: center;
     height: 100%;
+
 }
 
 .nav-item {
@@ -78,7 +112,7 @@ main {
     display: flex;
     align-items: center;
     height: 5rem;
-    color: var(--text-primary);
+    color: var(--text);
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
     transition: var(--transition-speed);
@@ -86,7 +120,7 @@ main {
 
 .nav-link:hover {
     filter: grayscale(0%) opacity(1);
-    background: var(--bg-secondary);
+    background: var(--bg-dropdown);
     color: var(--transition-speed);
 }
 
@@ -109,8 +143,8 @@ main {
     text-transform: uppercase;
     margin-bottom: 1rem;
     text-align: center;
-    color: var(--text-secondary);
-    background: var(--bg-secondary);
+    color: var(--text);
+    background: var(--bg-nav);
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.3ch;
@@ -135,8 +169,8 @@ main {
     width: 500px;
     opacity: 0;
     z-index: 2;
-    background: blue;
-    border-top: 2px solid white;
+    background: var(--bg-dropdown);
+    border-top: 2px solid var(--border-color);
 
     border-radius: 8px;
 
@@ -160,7 +194,7 @@ main {
 
 .dropdown-item a::before {
     content: ' ';
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
