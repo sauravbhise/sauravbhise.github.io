@@ -17,12 +17,12 @@ if (theme) {
 
 darkButton.onclick = () => {
     body.classList.replace('light', 'dark');
-    localStorage.setItem('theme', 'dark')
+    localStorage.setItem('theme', 'dark');
 }
 
 lightButton.onclick = () => {
     body.classList.replace('dark', 'light');
-    localStorage.setItem('theme', 'light')
+    localStorage.setItem('theme', 'light');
 }
 
 solarButton.onclick = () => {
@@ -41,7 +41,6 @@ solarButton.onclick = () => {
         `
         body.classList.add('solar');
         solarButton.innerText = 'normalize';
-
-        localStorage.setItem('isSolar', true)
+        localStorage.setItem('isSolar', true);
     }
 };

@@ -194,6 +194,7 @@ main {
 
 .dropdown-item a::before {
     content: ' ';
+    background-color: var(--bg);
     border: 2px solid var(--border-color);
     border-radius: 50%;
     width: 2rem;
@@ -201,6 +202,18 @@ main {
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
+}
+
+#light::before {
+    background-color: #f8f8f8;
+}
+
+#dark::before {
+    background-color: #2a2e35;
+}
+
+#solar::before {
+    background-color: yellowgreen;
 }
 
 /*  Small Screens  */
