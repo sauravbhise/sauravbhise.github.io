@@ -1,16 +1,16 @@
 :root {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    --gray0: #f8f8f8;
-    --gray1: #dbe1e8;
+    --gray0: #8fc1e3;
+    --gray1: #f7f9fb;
     --gray2: #b2becd;
-    --gray3: #6c7983;
+    --gray3: #5085e5;
     --gray4: #454e56;
-    --gray5: #2a2e35;
-    --gray6: #12181b;
-    --blue: #0084a5;
-    --purple: #a82dd1;
-    --yellow: #fff565;
+    --gray5: #0b0c10;
+    --gray6: #000000;
+    --blue: #45a29e;
+    --purple: #66fcf1;
+    --yellow: #10e7dc;
 }
 
 .light {
@@ -23,9 +23,9 @@
 }
 
 .dark {
-    --bg: var(--gray5);
-    --bg-nav: linear-gradient(to bottom, var(--gray5), var(--gray6));
-    --bg-dropdown: var(--gray6);
+    --bg: var(--gray6);
+    --bg-nav: linear-gradient(to bottom, var(--gray5), var(--gray4));
+    --bg-dropdown: var(--gray5);
     --text: var(--gray0);
     --border-color: var(--purple);
     --bg-solar: var(--blue);
@@ -152,7 +152,7 @@ main {
     margin-bottom: 1rem;
     text-align: center;
     color: var(--text);
-    background: var(--bg-nav);
+    background: var(--bg-dropdown);
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.3ch;
@@ -176,7 +176,7 @@ main {
 }
 
 #solar::before {
-    background-color: yellowgreen;
+    background-color: #45a29e;
 }
 
 /*  Small Screens  */
