@@ -2,29 +2,30 @@
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     --gray0: #8fc1e3;
-    --gray1: #f7f9fb;
-    --gray2: #b2becd;
-    --gray3: #5085e5;
+    --gray1: #c9cad9;
+    --gray2: #576490;
+    --gray3: #c9caf8;
     --gray4: #2e3236;
-    --gray5: #0b0c10;
-    --gray6: #000000;
+    --gray5: #1c1d22;
+    --gray6: #141414;
     --blue: #45a29e;
-    --purple: #66fcf1;
+    --purple: #94c5cc;
     --yellow: #10e7dc;
 }
 
 .light {
-    --bg: var(--gray0);
-    --bg-nav: linear-gradient(to bottom, var(--gray1), var(--gray3));
-    --bg-dropdown: var(--gray0);
-    --text: var(--gray6);
+    --bg: var(--gray3);
+    /* --bg-nav: linear-gradient(to bottom, var(--gray1), var(--gray3)); */
+    --bg-nav: var(--gray1);
+    --bg-dropdown: var(--gray1);
+    --text: var(--gray2);
     --border-color: var(--blue);
     --bg-solar: var(--yellow);
 }
 
 .dark {
     --bg: var(--gray6);
-    --bg-nav: linear-gradient(to bottom, var(--gray5), var(--gray4));
+    --bg-nav: var(--gray5);
     --bg-dropdown: var(--gray5);
     --text: var(--gray0);
     --border-color: var(--purple);
@@ -37,8 +38,8 @@
     --gray2: #b6f880;
     --gray3: #5ec72d;
     --gray4: #3ea565;
-    --gray5: #005368;
-    --gray6: #003d4c;
+    --gray5: #368196;
+    --gray6: #0d2f6d;
 }
 
 a {
@@ -75,11 +76,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: var(--border-color);
+    background: var(--bg-solar);
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #6649b8;
+    background: var(--border-color);
 }
 
 main {
@@ -207,7 +208,7 @@ main {
     min-width: 250px;
     padding: 1.5rem;
     border-radius: 16px;
-    background: #17141d;
+    background: var(--bg-nav);
     box-shadow: -1rem 0 3rem #000;
     display: flex;
     flex-direction: column;
@@ -233,12 +234,13 @@ main {
 
 .card-header {
     margin-bottom: auto;
+    background: var(--bg);
 }
 
 .card-header p {
     font-size: 14px;
     margin: 0 0 1rem;
-    color: #7a7a8c;
+    color: var(--text);
 }
 
 .card-header h2 {
